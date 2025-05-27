@@ -1,0 +1,13 @@
+#!/bin/bash
+
+n_es=0
+
+for i in *
+do
+	if [ -d $i ];then
+		n=`ls $i | wc -l`
+		n_es=`expr $n_es + $n`
+	fi
+done
+
+echo "Hai fatto $n_es esercizi."
